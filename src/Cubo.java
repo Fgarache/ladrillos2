@@ -11,25 +11,14 @@ public class Cubo extends Canvas {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        g.setColor(Color.blue);
+        g.setColor(Color.YELLOW);
 
         //angulos
-       g.drawLine(100, 300, 340, 120);//1
-
-
+        //g.drawLine(100, 300, 340, 120);//1
         //cuadro
-        g.drawLine(100, 300, 100, 900);//1 I
-        g.drawLine(700, 300, 700, 900);//2 I
-        g.drawLine(940, 720, 940, 120);
-
-
-
-        for (int i = 20; i <= 650; i += 50) {
-            //linea orizontal
-
-
-            g.drawLine(700, 280 + i, 940, 100 + i);
-        }
+        //g.drawLine(100, 300, 100, 900);//1 I
+        //g.drawLine(700, 300, 700, 900);//2 I
+        //g.drawLine(940, 720, 940, 120);
 
 
         dibujarFrente(g);
@@ -45,9 +34,9 @@ public class Cubo extends Canvas {
                 g.drawLine(720 + j * 40, 285 - j * 30 + i * SALTO, 720 + j * 40, 335 - j * 30 + i * SALTO);
                 g.drawLine(700 + j * 40, 400 - j * 30 + i * SALTO, 700 + j * 40, 350 - j * 30 + i * SALTO);
 
-                g.drawLine(100+i*40+j*SALTO, 300-i*30, 120+i*40+j*SALTO, 285-i*30);
+                g.drawLine(100 + i * 40 + j * SALTO, 300 - i * 30, 120 + i * 40 + j * SALTO, 285 - i * 30);
 
-                g.drawLine(190+i*40+j*SALTO, 270-i*30, 170+i*40+j*SALTO, 285-i*30);
+                g.drawLine(190 + i * 40 + j * SALTO, 270 - i * 30, 170 + i * 40 + j * SALTO, 285 - i * 30);
 
 
             }
@@ -55,10 +44,11 @@ public class Cubo extends Canvas {
         //Linea Orizontal
         for (int i = 0; i < 13; i++) {
 
-                g.drawLine(100+i*20, 300 - i * 15, 700+i*20, 300 - i * 15);
-                g.drawLine(100, 300+i*SALTO/2, 700, 300+i*SALTO/2);
+            g.drawLine(100 + i * 20, 300 - i * 15, 700 + i * 20, 300 - i * 15);
+            g.drawLine(100, 300 + i * SALTO / 2, 700, 300 + i * SALTO / 2);
+            g.drawLine(700, 300 + i * SALTO / 2, 940, 120 + i * SALTO / 2);
 
-                
+
         }
     }
 }
